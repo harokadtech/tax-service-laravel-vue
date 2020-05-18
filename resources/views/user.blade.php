@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Requests</title>
     <meta name="csrf-token">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -68,14 +68,14 @@
         <div class="text-center">
             <h2>USER REQUESTS</h2>
     </div>
-    <table style='width: 100%' class="table table-bordered">
-        <thead>
+    <table style='width: 100%' class="table table-bordered table-striped">
+        <thead class="thead-dark">
         <tr>
-            <td>Email</td>
-            <td>Zip</td>
-            <td>Address</td>
-            <td>Status</td>
-            <td>Created_at</td>
+            <th scope="col">Email</th>
+            <th scope="col">Zip</th>
+            <th scope="col">Address</th>
+            <th scope="col">Status</th>
+            <th scope="col">Created_at</th>
         </tr>
         </thead>
         <tbody>
@@ -84,7 +84,11 @@
             <td>{{$field->email}}</td>
             <td>{{$field->zip}}</td>
             <td>{{$field->address}}</td>
-            <td>{{$field->status}}</td>
+            <td>{{$field->status}}
+                @if ($field->status === 'Ready')
+                    <a type="button" class="btn btn-success" href="invoices/download/{{$field->tax_data_id}}">Download pdf</a>
+                    @endif
+                    </td>
             <td>{{$field->created_at}}</td>
             </tr>
             @endforeach

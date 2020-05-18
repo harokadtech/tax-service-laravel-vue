@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Client;
 use App\Resident;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class ApiController extends Controller

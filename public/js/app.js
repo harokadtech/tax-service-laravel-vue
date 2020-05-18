@@ -2264,63 +2264,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /*    import {mapMutations} from 'vuex';
     import {mapMultiRowFields} from 'vuex-map-fields';*/
@@ -2353,7 +2296,7 @@ __webpack_require__.r(__webpack_exports__);
           return pattern.test(value) || 'Invalid e-mail.';
         }
       },
-      dialog: true,
+      dialog: false,
       sign: '',
       image: null,
       text: {
@@ -39545,123 +39488,6 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      [
-        _c(
-          "div",
-          { staticClass: "text-center" },
-          [
-            _c(
-              "v-dialog",
-              {
-                attrs: { width: "500" },
-                scopedSlots: _vm._u([
-                  {
-                    key: "activator",
-                    fn: function(ref) {
-                      var on = ref.on
-                      return [
-                        _c(
-                          "v-btn",
-                          _vm._g(
-                            { attrs: { color: "red lighten-2", dark: "" } },
-                            on
-                          ),
-                          [
-                            _vm._v(
-                              "\n                            Click Me\n                        "
-                            )
-                          ]
-                        )
-                      ]
-                    }
-                  }
-                ]),
-                model: {
-                  value: _vm.dialog,
-                  callback: function($$v) {
-                    _vm.dialog = $$v
-                  },
-                  expression: "dialog"
-                }
-              },
-              [
-                _vm._v(" "),
-                _c(
-                  "v-card",
-                  [
-                    _c(
-                      "v-card-title",
-                      {
-                        staticClass: "headline grey lighten-2",
-                        attrs: { "primary-title": "" }
-                      },
-                      [
-                        _vm._v(
-                          "\n                            Authentification\n                        "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("v-card-text", [
-                      _vm._v(
-                        "\n                            Please, Log In or Register\n                        "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("v-divider"),
-                    _vm._v(" "),
-                    _c(
-                      "v-card-actions",
-                      [
-                        _c("v-spacer"),
-                        _vm._v(" "),
-                        _c(
-                          "v-btn",
-                          {
-                            attrs: { color: "primary", text: "" },
-                            on: {
-                              click: function($event) {
-                                return _vm.register()
-                              }
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Register\n                            "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "v-btn",
-                          {
-                            attrs: { color: "primary", text: "" },
-                            on: {
-                              click: function($event) {
-                                return _vm.login()
-                              }
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Login\n                            "
-                            )
-                          ]
-                        )
-                      ],
-                      1
-                    )
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ],
-          1
-        )
-      ],
-      _vm._v(" "),
       _c(
         "v-container",
         [
@@ -39746,7 +39572,7 @@ var render = function() {
                       [
                         _c("p", [
                           _vm._v(
-                            "The debt enforcement office needs a valid proof of identity for the request.\n                    Photograph or scan the specified pages of your identity document (identity card or passport). Please\n                    ensure that your photo, personal details and signature are complete and easily identifiable."
+                            "The debt enforcement office needs a valid proof of identity for the request.\n                Photograph or scan the specified pages of your identity document (identity card or passport). Please\n                ensure that your photo, personal details and signature are complete and easily identifiable."
                           )
                         ]),
                         _vm._v(" "),
@@ -39821,11 +39647,11 @@ var render = function() {
                             _vm._l(_vm.text, function(value, name) {
                               return _c("div", [
                                 _vm._v(
-                                  "\n                        " +
+                                  "\n                    " +
                                     _vm._s(name) +
                                     " : " +
                                     _vm._s(value) +
-                                    "\n                    "
+                                    "\n                "
                                 )
                               ])
                             }),
@@ -39892,7 +39718,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                        Send\n                        "
+                                  "\n                    Send\n                    "
                                 ),
                                 _c(
                                   "v-icon",
@@ -39917,7 +39743,7 @@ var render = function() {
         1
       )
     ],
-    2
+    1
   )
 }
 var staticRenderFns = []
@@ -98400,8 +98226,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\ospanel\OSPanel\domains\tax.loc\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\ospanel\OSPanel\domains\tax.loc\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/daniil/PhpstormProjects/tax-service-laravel-vue/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/daniil/PhpstormProjects/tax-service-laravel-vue/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

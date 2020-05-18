@@ -17,4 +17,12 @@ class Resident extends Model
         'image',
         'sign'
         ];
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+    public function taxData()
+    {
+        return $this->hasOne('App\TaxData');
+    }
 }

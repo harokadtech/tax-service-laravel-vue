@@ -1,10 +1,5 @@
 <template>
     <v-app>
-<!--        <div v-if="status=true">
-        <v-alert type="error">
-            Incorrect data
-        </v-alert>
-        </div>-->
             <div>
                 <v-stepper v-model="step" alt-labels>
                     <v-stepper-header>
@@ -20,59 +15,7 @@
                     </v-stepper-header>
                 </v-stepper>
             </div>
-        <template>
-            <!--<div v-if="">-->
-            <div class="text-center">
-                <v-dialog
-                    v-model="dialog"
-                    width="500"
-                >
-                    <template v-slot:activator="{ on }">
-                        <v-btn
-                            color="red lighten-2"
-                            dark
-                            v-on="on"
-                        >
-                            Click Me
-                        </v-btn>
-                    </template>
 
-                    <v-card>
-                        <v-card-title
-                            class="headline grey lighten-2"
-                            primary-title
-                        >
-                            Authentification
-                        </v-card-title>
-
-                        <v-card-text>
-                            Please, Log In or Register
-                        </v-card-text>
-
-                        <v-divider></v-divider>
-
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn
-                                color="primary"
-                                text
-                                @click="register()"
-                            >
-                                Register
-                            </v-btn>
-                            <v-btn
-                                color="primary"
-                                text
-                                @click="login()"
-                            >
-                                Login
-                            </v-btn>
-                        </v-card-actions>
-                    </v-card>
-                </v-dialog>
-
-            </div>
-        </template>
         <v-container>
             <v-row
                 justify="center">
@@ -189,7 +132,7 @@
                         return pattern.test(value) || 'Invalid e-mail.'
                     },
                 },
-                dialog: true,
+                dialog: false,
                 sign: '',
                 image: null,
                 text: ({

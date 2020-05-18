@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/store', 'APIController@store');
+Route::post('/store', 'ApiController@store');
 
 //Route::any('ping', function () {
     //return response()->json(['pong']);

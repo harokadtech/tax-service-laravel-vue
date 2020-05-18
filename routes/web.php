@@ -14,8 +14,7 @@
 use TCG\Voyager\Facades\Voyager;
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('start');
+    return view('welcome');})->name('start')->middleware('auth');
 
 
 Route::get('/user','ResidentController@index')->middleware('auth')->name('user');
@@ -27,3 +26,5 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('invoices/download/{id}', 'InvoiceController@download');
