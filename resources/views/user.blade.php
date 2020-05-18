@@ -86,7 +86,7 @@
             <td>{{$field->address}}</td>
             <td>{{$field->status}}
                 @if ($field->status === 'Ready')
-                    <a type="button" class="btn btn-success" href="invoices/download/{{$field->tax_data_id}}">Download pdf</a>
+                    <a type="button" class="btn btn-success" href="invoices/download/{{$field->taxData->id}}">Download pdf</a>
                     @endif
                     </td>
             <td>{{$field->created_at}}</td>

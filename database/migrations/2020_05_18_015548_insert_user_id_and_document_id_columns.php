@@ -14,7 +14,6 @@ class InsertUserIdAndDocumentIdColumns extends Migration
     public function up()
     {
         Schema::table('residents', function (Blueprint $table) {
-            $table->integer('tax_data_id')->nullable();
             $table->integer('user_id')->nullable();
         });
 
@@ -27,6 +26,7 @@ class InsertUserIdAndDocumentIdColumns extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('statements');
+
     }
+
 }

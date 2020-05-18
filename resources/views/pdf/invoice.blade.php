@@ -10,7 +10,7 @@
     <table width="100%">
         <tr style="border-bottom: 1px solid #000000">
             <td><h2>Invoice</h2></td>
-{{--            <td style="text-align: right"><h3>Request # {{$taxData->request_id}}</h3></td>--}}
+            <td style="text-align: right"><h3>Request # {{$taxData->resident->id}}</h3></td>
         </tr>
         <tr>
             <td style="padding-bottom: 16px;">
@@ -22,11 +22,10 @@
             <td>
                 <strong>Payment Method:</strong><br>
                 Visa ending **** 4242<br>
-                {{}}
             </td>
             <td style="text-align: right">
                 <strong>Request Date:</strong><br>
-{{--                {{$taxData->created_at}}<br><br>--}}
+                {{$taxData->resident->created_at}}<br><br>
             </td>
         </tr>
         <tr>

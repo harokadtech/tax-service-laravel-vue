@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\EloquentQueries\EloquentResidentQueries;
 use App\Resident;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,16 +11,22 @@ use Illuminate\Support\Facades\Log;
 
 class ResidentController extends Controller
 {
+    private $eloquentResidentQueries;
 
-    /**
+    public function __construct(EloquentResidentQueries $eloquentResidentQueries )
+    {
+        $this->eloquentResidentQueries = $eloquentResidentQueries;
+    }
+
+        /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $user = Auth::user()->email;
-        $userRequests = Resident::where('email',$user)->orderBy('created_at', 'DESC')->get();
+        $email = Auth::user()->email;
+        $userRequests = $this->eloquentResidentQueries->getResidents($email);
         return view('user', ['userRequests' => $userRequests]);/*compact('userRequests')*/
 
     }
