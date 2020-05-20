@@ -2265,20 +2265,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-/*    import {mapMutations} from 'vuex';
-    import {mapMultiRowFields} from 'vuex-map-fields';*/
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  /*        computed: {
-      // The `mapMultiRowFields()` function of
-      // the vuex-map-fields package, makes it
-      // possible to dynamically map the fields
-      // of multiple rows of data, to Vuex conform
-      // getter and setter functions.
-      ...mapMultiRowFields(['personalinfo']),
-  },*/
   components: {
     Signature: _Signature__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
@@ -2307,36 +2296,12 @@ __webpack_require__.r(__webpack_exports__);
       step: 1
     };
   },
-
-  /*        computed: {
-              zipErrors() {
-                  const errors = []
-                  if (!this.text.zip.$dirty) return errors
-                  !this.text.zip.maxLength && errors.push('Zip must be at most 4 characters long')
-                  !this.text.zip.required && errors.push('Zip is required.')
-                  return errors
-              },
-              emailErrors() {
-                  const errors = []
-                  if (!this.text.email.$dirty) return errors
-                  !this.text.email && errors.push('Must be valid e-mail')
-                  !this.text.email.required && errors.push('E-mail is required')
-                  return errors
-              },
-          },*/
   methods: {
     onClickChild: function onClickChild(value) {
       //console.log(value);
       this.sign = value;
       console.log(this.sign);
     },
-
-    /*            onChangeFileUpload() {
-                    this.image = this.$refs.image.files[0]; //[0] //не нужен при работе с vuetify
-                    console.log(this.image);
-    
-                },*/
-    //...mapMutations(['addPersonalRow']),
     edit: function edit() {
       this.step = 1;
     },

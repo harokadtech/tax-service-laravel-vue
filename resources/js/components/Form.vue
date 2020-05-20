@@ -107,20 +107,10 @@
 </template>
 
 <script>
-/*    import {mapMutations} from 'vuex';
-    import {mapMultiRowFields} from 'vuex-map-fields';*/
     import Signature from "./Signature";
     import Files from "./Files";
     import axios from 'axios';
     export default {
-        /*        computed: {
-            // The `mapMultiRowFields()` function of
-            // the vuex-map-fields package, makes it
-            // possible to dynamically map the fields
-            // of multiple rows of data, to Vuex conform
-            // getter and setter functions.
-            ...mapMultiRowFields(['personalinfo']),
-        },*/
         components: {Signature},
         data: () => {
             return {
@@ -143,35 +133,13 @@
                 step: 1,
             }
         },
-    /*        computed: {
-                zipErrors() {
-                    const errors = []
-                    if (!this.text.zip.$dirty) return errors
-                    !this.text.zip.maxLength && errors.push('Zip must be at most 4 characters long')
-                    !this.text.zip.required && errors.push('Zip is required.')
-                    return errors
-                },
-                emailErrors() {
-                    const errors = []
-                    if (!this.text.email.$dirty) return errors
-                    !this.text.email && errors.push('Must be valid e-mail')
-                    !this.text.email.required && errors.push('E-mail is required')
-                    return errors
-                },
-            },*/
+
         methods: {
             onClickChild(value) {
                 //console.log(value);
                 this.sign = value;
                 console.log(this.sign);
             },
-
-/*            onChangeFileUpload() {
-                this.image = this.$refs.image.files[0]; //[0] //не нужен при работе с vuetify
-                console.log(this.image);
-
-            },*/
-            //...mapMutations(['addPersonalRow']),
             edit() {
                 this.step = 1;
             },

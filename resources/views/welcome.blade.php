@@ -16,7 +16,7 @@
     </head>
     <body>
     <!-------------------Auth header------------------------->
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-light bg-gray shadow-sm">
         <div class="container">
 
             <ul class="navbar-nav ml-auto">
@@ -64,9 +64,7 @@
     <div id="app">
        <form_></form_>
    </div>
-{{--
-   <script src="{!! asset('js/app.js') !!}"></script>
---}}
+
     <script src="{{ asset('js/app.js') }}" defer></script>
     </body>
 </html>

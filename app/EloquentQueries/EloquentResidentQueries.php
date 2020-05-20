@@ -12,7 +12,7 @@ class EloquentResidentQueries
     {
         return Resident::with('taxData')->where('email',$email)->orderBy('created_at', 'DESC')->get();
     }
-    public function storeResidents($request, $image, $signName)
+    public function storeResidents($request, $image, $signName, $userId)
     {
        return Resident::create([
             'image' => $image->store('/public/images'),
@@ -20,6 +20,7 @@ class EloquentResidentQueries
             'zip' => $request->input('zip'),
             'address' => $request->input('address'),
             'sign' => $signName,
+            'user_id' => (int) $userId,
         ]);
     }
 }

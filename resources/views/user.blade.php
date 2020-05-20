@@ -87,6 +87,7 @@
             <td>{{$field->status}}
                 @if ($field->status === 'Ready')
                     <a type="button" class="btn btn-success" href="invoices/download/{{$field->taxData->id}}">Download pdf</a>
+                    <a type="button" class="btn btn-success" href="invoices/sendmail/{{$field->taxData->id}}">Send to email</a>
                     @endif
                     </td>
             <td>{{$field->created_at}}</td>
@@ -94,6 +95,13 @@
             @endforeach
         </tbody>
     </table>
+    @if (\Session::has('success'))
+        <div class="alert alert-success">
+            <ul>
+                <li>{!! \Session::get('success') !!}</li>
+            </ul>
+        </div>
+    @endif
 </div>
 
 <script src="{!! asset('js/app.js') !!}"></script>

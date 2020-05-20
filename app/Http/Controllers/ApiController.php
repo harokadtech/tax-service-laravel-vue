@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Client;
 use App\Http\Service\ApiService;
 use App\Resident;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ApiController extends Controller
@@ -33,7 +35,9 @@ class ApiController extends Controller
             'sign' => 'required'
         ]);
 
-        $this->ApiService->saveResidentFiles($request);
+        $userId = (User::where('email', $request->email)->first())->id;
+
+        $this->ApiService->saveResidentFiles($request, $userId);
 
     }
 

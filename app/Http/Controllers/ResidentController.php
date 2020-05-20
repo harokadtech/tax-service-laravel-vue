@@ -27,7 +27,7 @@ class ResidentController extends Controller
     {
         $email = Auth::user()->email;
         $userRequests = $this->eloquentResidentQueries->getResidents($email);
-        return view('user', ['userRequests' => $userRequests]);/*compact('userRequests')*/
+        return view('user', ['userRequests' => $userRequests]);
 
     }
 
