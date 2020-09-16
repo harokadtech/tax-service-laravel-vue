@@ -24,6 +24,6 @@ class MailController extends Controller
 
         Mail::to(Auth::user()->email)->send(new StatementEmail($taxData, $pdf));
 
-        return redirect()->back()->with('success', 'We have sent this statement on your email! Check it out');;
+        return redirect()->back()->with('success', 'We have sent this statement on your email! Check it out');
     }
 }
